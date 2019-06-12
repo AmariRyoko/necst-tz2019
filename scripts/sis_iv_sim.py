@@ -96,7 +96,7 @@ class sis_iv_sim(object):
 
 #hu_pub
     def sis_hu_iv(self,q):
-        self.pub_hu_v.publish(q.data)
+        self.pub_hu_v.publish(q.dat)
         self.pub_hu_i.publish(q.data)
 
 #hl_pub
@@ -115,5 +115,7 @@ class sis_iv_sim(object):
         self.pub_vl_i.publish(q.data)
 
 if __name__ == "__main__":
+
     rospy.init_node(name)
+    c = sis_iv_sim()
     rospy.spin()
