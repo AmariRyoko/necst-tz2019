@@ -35,7 +35,7 @@ class sis_iv_sim(object):
         self.sub_hl_vp = rospy.Subscriber(
                 name = "/dev/cpz340816/rsw0/ch2",
                 data_class = std_msgs.msg.Float64,
-                callback = self.sis_hu_iv
+                callback = self.sis_hl_iv
             )
 
         self.pub_hl_v = rospy.Publisher(
@@ -56,7 +56,7 @@ class sis_iv_sim(object):
         self.sub_vu_vp = rospy.Subscriber(
                 name = "/dev/cpz340816/rsw0/ch3",
                 data_class = std_msgs.msg.Float64,
-                callback = self.sis_hu_iv
+                callback = self.sis_vu_iv
             )
 
         self.pub_hl_v = rospy.Publisher(
@@ -77,7 +77,7 @@ class sis_iv_sim(object):
         self.sub_vu_vp = rospy.Subscriber(
                 name = "/dev/cpz340816/rsw0/ch4",
                 data_class = std_msgs.msg.Float64,
-                callback = self.sis_hu_iv
+                callback = self.sis_vl_iv
             )
 
         self.pub_hl_v = rospy.Publisher(
