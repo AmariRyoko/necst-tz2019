@@ -105,12 +105,12 @@ class sis_iv_sim(object):
         self.pub_hl_i.publish(q.data)
 
 #vu_pub
-    def sis_hl_iv(self,q):
+    def sis_vu_iv(self,q):
         self.pub_vu_v.publish(q.data)
         self.pub_vu_i.publish(q.data)
 
 #vl_pub
-    def sis_hl_iv(self,q):
+    def sis_vl_iv(self,q):
         self.pub_vl_v.publish(q.data)
         self.pub_vl_i.publish(q.data)
 
