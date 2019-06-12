@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_hl_i_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_hl_i_reader.conf" />
+
+  </node>
+
+</launch>
