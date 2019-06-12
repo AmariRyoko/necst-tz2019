@@ -53,7 +53,7 @@ class sis_iv_sim(object):
             )
 
 #vu_vp
-        self.sub_vu_vp = rospy.Subscriber(
+        self.sub_vu_v = rospy.Subscriber(
                 name = "/dev/cpz340816/rsw0/ch3",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_vu_iv
