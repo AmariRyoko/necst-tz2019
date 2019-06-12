@@ -12,7 +12,7 @@ class sis_iv_sim(object):
     def __init__(self):
 #hu_vp
         self.sub_hu_vp = rospy.Subscriber(
-                name = "/dev/cpz340816rsw0/ch1",
+                name = "/dev/cpz340816/rsw0/ch1",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_hu_iv
             )
@@ -33,7 +33,7 @@ class sis_iv_sim(object):
 
 #hl_vp
         self.sub_hl_vp = rospy.Subscriber(
-                name = "/dev/cpz340816rsw0/ch2",
+                name = "/dev/cpz340816/rsw0/ch2",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_hu_iv
             )
@@ -54,7 +54,7 @@ class sis_iv_sim(object):
 
 #vu_vp
         self.sub_vu_vp = rospy.Subscriber(
-                name = "/dev/cpz340816rsw0/ch3",
+                name = "/dev/cpz340816/rsw0/ch3",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_hu_iv
             )
@@ -75,7 +75,7 @@ class sis_iv_sim(object):
 
 #vl_vp
         self.sub_vu_vp = rospy.Subscriber(
-                name = "/dev/cpz340816rsw0/ch4",
+                name = "/dev/cpz340816/rsw0/ch4",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_hu_iv
             )
