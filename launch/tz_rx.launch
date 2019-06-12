@@ -1,14 +1,6 @@
 <launch>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_hl_i_reader"
-        type = "relay.py">
-    <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_hl_i_reader.conf" />
-
-  </node>
-
-  <node pkg = "necst-tz2019"
         name = "sis_bias_vp_writer"
         type = "relay.py">
     <param name = "config_file"
@@ -17,10 +9,50 @@
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_hl_vp_writer"
+        name = "irr_freq_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_hl_vp_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/irr_freq_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "irr_power_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/irr_power_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "lo1st_freq_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/lo1st_freq_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "lo1st_power_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/lo1st_power_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "loatt1_vcmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/loatt1_vcmd_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "loatt2_vcmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/loatt2_vcmd_writer.conf" />
 
   </node>
 
@@ -33,10 +65,10 @@
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_vl_vp_writer"
+        name = "sis_bias_hl_vp_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_vl_vp_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_hl_vp_writer.conf" />
 
   </node>
 
@@ -45,6 +77,222 @@
         type = "relay.py">
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vu_vp_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_vl_vp_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vl_vp_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_hu_i_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_hu_i_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_hl_i_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_hl_i_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_vu_i_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vu_i_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_vl_i_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vl_i_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_hu_v_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_hu_v_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_hl_v_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_hl_v_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_vu_v_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vu_v_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_vl_v_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vl_v_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg1_freq_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg1_freq_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg1_freq_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg1_freq_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg1_pw_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg1_pw_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg1_pw_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg1_pw_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg2_freq_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg2_freq_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg2_freq_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg2_freq_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg2_pw_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg2_pw_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sg2_pw_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg2_pw_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "lo1_freq_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/lo1_freq_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "lo1_freq_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/lo1_freq_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "lo1_pw_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/lo1_pw_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "lo1_pw_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/lo1_pw_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "loatt1_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/loatt1_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "loatt2_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/loatt2_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sa_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sa_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "switch_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/switch_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "dewar_temp_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "dewar_vacuum_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
 
   </node>
 
