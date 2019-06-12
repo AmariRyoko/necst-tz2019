@@ -3,7 +3,6 @@
 name = "sis_iv_sim"
 
 import time
-import threading
 import rospy
 import std_msgs.msg
 
@@ -11,40 +10,110 @@ import std_msgs.msg
 class sis_iv_sim(object):
 
     def __init__(self):
+#hu_vp
+        self.sub_hu_vp = rospy.Subscriber(
+                name = "/dev/cpz340816rsw0/ch1",
+                data_class = std_msgs.msg.Float64,
+                callback = self.sis_hu_iv
+            )
 
-        self.topic_to = rospy.Publisher(
-                name = "/cpz6204_rsw0/ch01",
-                data_class = std_msgs.msg.Int64,
+        self.pub_hu_v = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch1",
+                data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
             )
 
-        self.topic_from = rospy.Subscriber(
-                name = "/antenna/az_speed",
+        self.pub_hu_i = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch5",
                 data_class = std_msgs.msg.Float64,
-                callback = self.encoder_az_sim,
+                latch = True,
                 queue_size = 1,
             )
 
-    def sis_iv_sim(self, status):
-        self.command_speed = status.data
-        return
+#hl_vp
+        self.sub_hl_vp = rospy.Subscriber(
+                name = "/dev/cpz340816rsw0/ch2",
+                data_class = std_msgs.msg.Float64,
+                callback = self.sis_hu_iv
+            )
 
-    def publish_status(self):
+        self.pub_hl_v = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch2",
+                data_class = std_msgs.msg.Float64,
+                latch = True,
+                queue_size = 1,
+            )
 
-        enc_az_last = None
-        while not rospy.is_shutdown():
-            self.enc_az += self.command_speed * 0.1 * 0.1
+        self.pub_hl_i = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch6",
+                data_class = std_msgs.msg.Float64,
+                latch = True,
+                queue_size = 1,
+            )
 
-            if self.enc_az != enc_az_last:
-                self.topic_to.publish(int(self.enc_az / (360*3600/(23600*400))))
+#vu_vp
+        self.sub_vu_vp = rospy.Subscriber(
+                name = "/dev/cpz340816rsw0/ch3",
+                data_class = std_msgs.msg.Float64,
+                callback = self.sis_hu_iv
+            )
 
-                enc_az_last = self.enc_az
+        self.pub_hl_v = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch3",
+                data_class = std_msgs.msg.Float64,
+                latch = True,
+                queue_size = 1,
+            )
 
-            time.sleep(0.01)
-            continue
+        self.pub_hl_i = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch7",
+                data_class = std_msgs.msg.Float64,
+                latch = True,
+                queue_size = 1,
+            )
+
+#vl_vp
+        self.sub_vu_vp = rospy.Subscriber(
+                name = "/dev/cpz340816rsw0/ch4",
+                data_class = std_msgs.msg.Float64,
+                callback = self.sis_hu_iv
+            )
+
+        self.pub_hl_v = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch4",
+                data_class = std_msgs.msg.Float64,
+                latch = True,
+                queue_size = 1,
+            )
+
+        self.pub_hl_i = rospy.Publisher(
+                name = "/dev/cpz3177/rsw0/ch8",
+                data_class = std_msgs.msg.Float64,
+                latch = True,
+                queue_size = 1,
+            )
+
+#hu_pub
+    def sis_hu_iv(self,q):
+        self.pub_hu_v.publish(q.data)
+        self.pub_hu_i.publish(q.data)
+
+#hl_pub
+    def sis_hl_iv(self,q):
+        self.pub_hl_v.publish(q.data)
+        self.pub_hl_i.publish(q.data)
+
+#vu_pub
+    def sis_hl_iv(self,q):
+        self.pub_vu_v.publish(q.data)
+        self.pub_vu_i.publish(q.data)
+
+#vl_pub
+    def sis_hl_iv(self,q):
+        self.pub_vl_v.publish(q.data)
+        self.pub_vl_i.publish(q.data)
 
 if __name__ == "__main__":
     rospy.init_node(name)
-    enc_az_sim = sis_iv_sim()
     rospy.spin()
