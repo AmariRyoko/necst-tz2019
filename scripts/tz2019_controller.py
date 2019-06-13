@@ -45,7 +45,7 @@ class SWITCH(object):
     def if_switch(self, command):
         topic_name = '/tz2019/switch/cmd'
 
-        self.ps.set_publisher(topic_name = topic_name, data_class = std_msg.msg.Float64, queue_size = 1, latch = True)
+        self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
 
         self.ps.publish(topic_name = topic_name, msg = command)
 
