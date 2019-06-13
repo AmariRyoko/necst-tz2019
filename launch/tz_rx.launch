@@ -7,7 +7,7 @@
            value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
 
   </node>
-<!--
+
   <node pkg = "necst-tz2019"
         name = "irr_freq_writer"
         type = "relay.py">
@@ -55,7 +55,7 @@
            value = "$(find necst-tz2019)/node_conf/loatt2_vcmd_writer.conf" />
 
   </node>
--->
+
   <node pkg = "necst-tz2019"
         name = "sis_bias_hu_vp_writer"
         type = "relay.py">
