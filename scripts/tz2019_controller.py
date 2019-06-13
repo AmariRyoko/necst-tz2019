@@ -42,7 +42,7 @@ class SWITCH(object):
         self.pub = {}
         self.ps = PS()
 
-    def if_switch(self):
+    def if_switch(self, command):
         topic_name = '/tz2019/switch/cmd'
 
         self.ps.set_publisher(topic_name = topic_name, data_class = std_msg.msg.Float64, queue_size = 1, latch = True)
@@ -56,14 +56,14 @@ class LOSG(object):
         self.pub = {}
         self.ps = PS()
 
-    def losg_f(self):
+    def losg_f(self, command):
         topic_name = '/tz2019/losg/f_cmd'
 
         self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
 
         self.ps.publish(topic_name = topic_name, msg = command)
 
-    def losg_p(self):
+    def losg_p(self, command):
         topic_name = '/tz2019/losg/p_cmd'
 
         self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
