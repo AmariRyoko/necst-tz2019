@@ -57,6 +57,30 @@
   </node>
 
   <node pkg = "necst-tz2019"
+        name = "losg_fcmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/losg_fcmd_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "losg_pcmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/losg_pcmd_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "switch_cmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/switch_cmd_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
         name = "sis_bias_hu_vp_writer"
         type = "relay.py">
     <param name = "config_file"
