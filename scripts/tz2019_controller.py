@@ -28,7 +28,7 @@ class PS(object):
 
     def set_publisher(self, topic_name, data_class, queue_size, latch = True):
         if topic_name not in self.pub:
-            self.pub[topic_name] = rospy.Publishr(topic_name = topic_name, data_class = data_class, queue_size = queue_size, latch = latch)
+            self.pub[topic_name] = rospy.Publishr(name = topic_name, data_class = data_class, queue_size = queue_size, latch = latch)
             time.sleep(0.01)
 
         else:
@@ -48,6 +48,7 @@ class SWITCH(object):
         self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
 
         self.ps.publish(topic_name = topic_name, msg = command)
+        return
 
 
 class LOSG(object):
@@ -62,6 +63,7 @@ class LOSG(object):
         self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
 
         self.ps.publish(topic_name = topic_name, msg = command)
+        return
 
     def losg_p(self, command):
         topic_name = '/tz2019/losg/p_cmd'
@@ -69,3 +71,4 @@ class LOSG(object):
         self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
 
         self.ps.publish(topic_name = topic_name, msg = command)
+        return
