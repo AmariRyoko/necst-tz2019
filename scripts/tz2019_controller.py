@@ -26,7 +26,7 @@ class PS(object):
         self.pub[topic_name].publish(msg)
         return
 
-    def set_pulisher(self, topic_name, data_class, queue_size, latch = True):
+    def set_publisher(self, topic_name, data_class, queue_size, latch = True):
         if topic_name not in self.pub:
             self.pub[topic_name] = rospy.Publishr(topic_name = topic_name, data_class = data_class, queue_size = queue_size, latch = latch)
             time.sleep(0.01)
@@ -37,3 +37,35 @@ class PS(object):
 
 
 class SWITCH(object):
+
+    def __init__(self):
+        self.pub = {}
+        self.ps = PS()
+
+    def if_switch(self):
+        topic_name = '/tz2019/switch/cmd'
+
+        self.ps.set_publisher(topic_name = topic_name, data_class = std_msg.msg.Float64, queue_size = 1, latch = True)
+
+        self.ps.publish(topic_name = topic_name, msg = command)
+
+
+class LOSG(object):
+
+    def __init__(self):
+        self.pub = {}
+        self.ps = PS()
+
+    def losg_f(self):
+        topic_name = '/tz2019/losg/f_cmd'
+
+        self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
+
+        self.ps.publish(topic_name = topic_name, msg = command)
+
+    def losg_p(self):
+        topic_name = '/tz2019/losg/p_cmd'
+
+        self.ps.set_publisher(topic_name = topic_name, data_class = std_msgs.msg.Float64, queue_size = 1, latch = True)
+
+        self.ps.publish(topic_name = topic_name, msg = command)
