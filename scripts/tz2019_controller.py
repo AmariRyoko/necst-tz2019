@@ -39,7 +39,7 @@ class PS(object):
 class SWITCH(object):
 
     def __init__(self):
-        self.pub = {}
+        rospy.init_node(name)
         self.ps = PS()
 
     def if_switch(self, command):
@@ -53,7 +53,7 @@ class SWITCH(object):
 class LOSG(object):
 
     def __init__(self):
-        self.pub = {}
+        rospy.init_node(name)
         self.ps = PS()
 
     def losg_f(self, command):
