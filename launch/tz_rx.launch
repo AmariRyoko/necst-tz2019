@@ -83,8 +83,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_hu_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_hu/vp_cmd'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch1'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_hu_vp_writer.conf" />
 
@@ -93,8 +91,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_hl_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_hl/vp_cmd'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch2'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_hl_vp_writer.conf" />
 
@@ -103,8 +99,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_vu_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_vu/vp_cmd'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch3'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vu_vp_writer.conf" />
 
@@ -113,8 +107,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_vl_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_vl/vp_cm'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch4'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vl_vp_writer.conf" />
 
@@ -123,8 +115,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_hu_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_hu/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch1'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_hu_i_reader.conf" />
 
@@ -133,8 +123,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_hl_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_hl/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch2'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_hl_i_reader.conf" />
 
@@ -143,8 +131,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_vu_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_vu/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch3'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vu_i_reader.conf" />
 
@@ -153,8 +139,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_vl_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_vl/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch4'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vl_i_reader.conf" />
 
@@ -163,8 +147,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_hu_v_reader"
         type = "relay.py">
-    <remap from = '/sis_v_cmd' to = '/sis_hu/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch5'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_hu_v_reader.conf" />
 
@@ -173,8 +155,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_hl_v_reader"
         type = "relay.py">
-    <remap from = '/sis_v_cmd' to = '/sis_hl/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch6'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_hl_v_reader.conf" />
 
@@ -183,8 +163,6 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_vu_v_reader"
         type = "relay.py">
-    <remap from = '/sis_v_cmd' to = '/sis_vu/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch7'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vu_v_reader.conf" />
 
@@ -193,18 +171,14 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_vl_v_reader"
         type = "relay.py">
-    <remap from = '/sis_v_cmd' to = '/sis_vl/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch8'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vl_v_reader.conf" />
 
   </node>
-
+<!--
   <node pkg = "necst-tz2019"
         name = "sg1_freq_reader"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg1/f_cmd'/>
-    <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/f_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg1_freq_reader.conf" />
 
@@ -213,8 +187,6 @@
   <node pkg = "necst-tz2019"
         name = "sg1_freq_writer"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg1/f_cmd'/>
-    <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/f_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg1_freq_writer.conf" />
 
@@ -223,8 +195,6 @@
   <node pkg = "necst-tz2019"
         name = "sg1_pw_reader"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg1/p_cmd'/>
-    <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/p_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg1_pw_reader.conf" />
 
@@ -233,8 +203,6 @@
   <node pkg = "necst-tz2019"
         name = "sg1_pw_writer"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg1/p_cmd'/>
-    <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/p_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg1_pw_writer.conf" />
 
@@ -243,8 +211,6 @@
   <node pkg = "necst-tz2019"
         name = "sg2_freq_reader"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg2/f_cmd'/>
-    <remap from = '/dev/fsw0020/ip' to = '/dev/fsw0020/ip_192_168_100_182/f_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg2_freq_reader.conf" />
 
@@ -253,8 +219,6 @@
   <node pkg = "necst-tz2019"
         name = "sg2_freq_writer"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg2/f_cmd'/>
-    <remap from = '/dev/fsw0020/ip' to = '/dev/fsw0020/ip_192_168_100_182/f_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg2_freq_writer.conf" />
 
@@ -263,8 +227,6 @@
   <node pkg = "necst-tz2019"
         name = "sg2_pw_reader"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg2/p_cmd'/>
-    <remap from = '/dev/fsw0020/ip' to = '/dev/fsw0020/ip_192_168_100_182/p_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg2_pw_reader.conf" />
 
@@ -273,8 +235,6 @@
   <node pkg = "necst-tz2019"
         name = "sg2_pw_writer"
         type = "relay.py">
-    <remap from = '/sg_cmd' to = '/sg2/p_cmd'/>
-    <remap from = '/dev/fsw0020/ip' to = '/dev/fsw0020/ip_192_168_100_182/p_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sg2_pw_writer.conf" />
 
@@ -315,8 +275,6 @@
   <node pkg = "necst-tz2019"
         name = "loatt1_writer"
         type = "relay.py">
-    <remap from = '/loatt_cmd' to = '/loatth_cmd'/>
-    <remap from = '/dev/vcva/ip' to = '/dev/vcva/ip_192_168_100_183'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/loatt1_writer.conf" />
 
@@ -325,8 +283,6 @@
   <node pkg = "necst-tz2019"
         name = "loatt2_writer"
         type = "relay.py">
-    <remap from = '/loatt_cmd' to = '/loattv_cmd'/>
-    <remap from = '/dev/vcva/ip' to = '/dev/vcva/ip_192_168_100_184'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/loatt2_writer.conf" />
 
@@ -363,7 +319,7 @@
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
 
   </node>
-
+-->
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
         type = "sis_iv_sim.py">
