@@ -96,23 +96,27 @@ class sis_iv_sim(object):
 
 #hu_pub
     def sis_hu_iv(self,q):
+        i_data = q.data/50
         self.pub_hu_v.publish(q.data)
-        self.pub_hu_i.publish(q.data)
+        self.pub_hu_i.publish(i_data)
 
 #hl_pub
     def sis_hl_iv(self,q):
+        i_data = q.data/50
         self.pub_hl_v.publish(q.data)
-        self.pub_hl_i.publish(q.data)
+        self.pub_hl_i.publish(i_data)
 
 #vu_pub
     def sis_vu_iv(self,q):
+        i_data = q.data/50
         self.pub_vu_v.publish(q.data)
-        self.pub_vu_i.publish(q.data)
+        self.pub_vu_i.publish(i_data)
 
 #vl_pub
     def sis_vl_iv(self,q):
+        i_data = q.data/50
         self.pub_vl_v.publish(q.data)
-        self.pub_vl_i.publish(q.data)
+        self.pub_vl_i.publish(i_data)
 
 if __name__ == "__main__":
 
