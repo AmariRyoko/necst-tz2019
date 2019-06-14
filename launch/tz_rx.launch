@@ -175,7 +175,7 @@
            value = "$(find necst-tz2019)/node_conf/sis_bias_vl_v_reader.conf" />
 
   </node>
-<!--
+
   <node pkg = "necst-tz2019"
         name = "sg1_freq_reader"
         type = "relay.py">
@@ -319,7 +319,7 @@
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
 
   </node>
--->
+
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
         type = "sis_iv_sim.py">
