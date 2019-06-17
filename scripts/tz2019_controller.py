@@ -33,8 +33,6 @@ class make_pub(object):
         if topic_name not in self.pub:
             self.pub[topic_name] = rospy.Publisher(name = topic_name, data_class = data_class, queue_size = 1, latch = False)
             time.sleep(0.01)
-
-        else:
             pass
         return
 
@@ -48,7 +46,7 @@ class switch(object):
         topic_name = '/tz2019/switch/cmd'
         data_class = std_msgs.msg.Float64
 
-        self.ps.publish(topic_name, data_class, msg = command)
+        self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
 
@@ -61,12 +59,12 @@ class losg(object):
         topic_name = '/tz2019/losg/f_cmd'
         data_class = std_msgs.msg.Float64
 
-        self.ps.publish(topic_name, data_class, msg = command)
+        self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
     def set_losg_power(self, command):
         topic_name = '/tz2019/losg/p_cmd'
         data_class = std_msgs.msg.Float64
 
-        self.ps.publish(topic_name, data_class, msg = command)
+        self.make_pub.publish(topic_name, data_class, msg = command)
         return
