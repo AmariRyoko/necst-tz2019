@@ -12,20 +12,20 @@ class sis_iv_sim(object):
     def __init__(self):
 #hu_vp
         self.sub_hu_vp = rospy.Subscriber(
-                name = "/dev/cpz3346A/rsw0/ch1",
+                name = "/dev/pci3346A/rsw0/ch1",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_hu_iv
             )
 
         self.pub_hu_v = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch1",
+                name = "/dev/pci3177/rsw0/ch1",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
             )
 
         self.pub_hu_i = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch5",
+                name = "/dev/pci3177/rsw0/ch5",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
@@ -33,20 +33,20 @@ class sis_iv_sim(object):
 
 #hl_vp
         self.sub_hl_vp = rospy.Subscriber(
-                name = "/dev/cpz3346A/rsw0/ch2",
+                name = "/dev/pci3346A/rsw0/ch2",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_hl_iv
             )
 
         self.pub_hl_v = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch2",
+                name = "/dev/pci3177/rsw0/ch2",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
             )
 
         self.pub_hl_i = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch6",
+                name = "/dev/pci3177/rsw0/ch6",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
@@ -54,20 +54,20 @@ class sis_iv_sim(object):
 
 #vu_vp
         self.sub_vu_vp = rospy.Subscriber(
-                name = "/dev/cpz3346A/rsw0/ch3",
+                name = "/dev/pci3346A/rsw0/ch3",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_vu_iv
             )
 
         self.pub_vu_v = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch3",
+                name = "/dev/pci3177/rsw0/ch3",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
             )
 
         self.pub_vu_i = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch7",
+                name = "/dev/pci3177/rsw0/ch7",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
@@ -75,20 +75,20 @@ class sis_iv_sim(object):
 
 #vl_vp
         self.sub_vl_vp = rospy.Subscriber(
-                name = "/dev/cpz3346A/rsw0/ch4",
+                name = "/dev/pci3346A/rsw0/ch4",
                 data_class = std_msgs.msg.Float64,
                 callback = self.sis_vl_iv
             )
 
         self.pub_vl_v = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch4",
+                name = "/dev/pci3177/rsw0/ch4",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
             )
 
         self.pub_vl_i = rospy.Publisher(
-                name = "/dev/cpz3177/rsw0/ch8",
+                name = "/dev/pci3177/rsw0/ch8",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
