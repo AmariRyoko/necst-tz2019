@@ -326,7 +326,7 @@
     <remap from = '/loatt_cmd' to = '/loatth_cmd'/>
     <remap from = '/dev/vcva/ip' to = '/dev/vcva/ip_192_168_100_183'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/loatt1_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/loatt_writer.conf" />
 
   </node>
 
@@ -336,7 +336,7 @@
     <remap from = '/loatt_cmd' to = '/loattv_cmd'/>
     <remap from = '/dev/vcva/ip' to = '/dev/vcva/ip_192_168_100_184'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/loatt2_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/loatt_writer.conf" />
 
   </node>
 
@@ -378,5 +378,22 @@
 
   </node>
 
+  <node pkg = "necst-tz2019"
+        name = "sa_data_sim"
+        type = "sa_data_sim.py">
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "temp_data_sim"
+        type = "temp_data_sim.py">
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "vacuum_data_sim"
+        type = "vacuum_data_sim.py">
+
+  </node>
 
 </launch>
