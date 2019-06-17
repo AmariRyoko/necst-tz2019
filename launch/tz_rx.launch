@@ -372,34 +372,6 @@
 
   </node>
 
-  <node pkg = "necst-tz2019"
-        name = "sis_iv_sim"
-        type = "sis_iv_sim.py">
 
-  </node>
-
-  <node pkg = "necst-tz2019"
-        name = "sa_data_sim"
-        type = "sa_data_sim.py">
-
-  </node>
-
-  <node pkg = "necst-tz2019"
-        name = "temp_data_sim"
-        type = "temp_data_sim.py">
-
-  </node>
-
-  <node pkg = "necst-tz2019"
-        name = "tz2019_controller"
-        type = "tz2019_controller.py">
-
-  </node>
-
-  <node pkg = "necst-tz2019"
-        name = "vacuum_data_sim"
-        type = "vacuum_data_sim.py">
-
-  </node>
 
 </launch>
