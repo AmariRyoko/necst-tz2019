@@ -392,7 +392,7 @@
 
   <node pkg = "necst-tz2019"
         name = "vacuum_data_sim"
-        type = "vacuum_data_sims">
+        type = "vacuum_data_sim">
 
   </node>
 
