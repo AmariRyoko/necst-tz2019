@@ -22,12 +22,11 @@ class make_pub(object):
         pass
 
     def publish(self, topic_name, data_class, msg):
-        if self.pub[topic_name]:
-            self.pub[topic_name].publish(msg)
-
-        else:
+        if topic_name not in self.pub:
             self.set_publisher(topic_name = topic_name, data_class = data_class)
-            self.pub[topic_name].publish(msg)
+            pass
+
+        self.pub[topic_name].publish(msg)
         return
 
     def set_publisher(self, topic_name, data_class):
