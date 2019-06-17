@@ -42,8 +42,7 @@ class make_pub(object):
 class switch(object):
 
     def __init__(self):
-        rospy.init_node(name)
-        self.ps = PS()
+        self.make_pub = make_pub()
 
     def set_if_switch(self, command):
         topic_name = '/tz2019/switch/cmd'
@@ -56,8 +55,7 @@ class switch(object):
 class losg(object):
 
     def __init__(self):
-        rospy.init_node(name)
-        self.ps = PS()
+        self.make_pub = make_pub()
 
     def set_losg_freq(self, command):
         topic_name = '/tz2019/losg/f_cmd'
