@@ -13,7 +13,7 @@ class sa_data_sim(object):
 
 
         self.pub_temp_data = rospy.Publisher(
-                name = "/dev/218/",
+                name = "/dev/tpg/usb/f_cmd",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
