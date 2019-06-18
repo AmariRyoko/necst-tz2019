@@ -1,4 +1,4 @@
-#topic(/dev/218/)にデータを投げるだけのsimulator用script(温度計用シミュレータ)
+#! /usr/bin/env python3
 name = "temp_data_sim"
 
 import time

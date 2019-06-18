@@ -1,4 +1,4 @@
-#topic(/dev/tpg/usb)にデータを投げるだけのsimulator用script(真空計用シミュレータ)
+#! /usr/bin/env python3
 name = "temp_data_sim"
 
 import time
