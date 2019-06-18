@@ -29,10 +29,6 @@ class sa_data_sim(object):
         th.setDaemon(True)
         th.start()
 
-    def start_thread(self):
-        th1 = threading.Thread(target=self.power)
-        th1.setDaemon(True)
-        th1.start()
 
 if __name__ == "__main__":
 
