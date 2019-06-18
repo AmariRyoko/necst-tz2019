@@ -7,7 +7,7 @@ import std_msgs.msg
 import threading
 
 
-class sa_data_sim(object):
+class temp_data_sim(object):
 
     def __init__(self):
 
@@ -21,7 +21,7 @@ class sa_data_sim(object):
 
     def data(self):
         while not rospy.is_shutdown():
-            self.pub_sa_data.publish(1)
+            self.pub_temp_data.publish(1)
             time.sleep(1)
             continue
 
@@ -35,7 +35,6 @@ class sa_data_sim(object):
 if __name__ == "__main__":
 
     rospy.init_node(name)
-    sa = temp_data_sim()
-    sa.thread()
-    sa.data()
+    temp = temp_data_sim()
+    temp.thread()
     rospy.spin()
