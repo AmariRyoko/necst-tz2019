@@ -394,5 +394,6 @@
   <node pkg = "necst-tz2019"
         name = "vacuum_data_sim"
         type = "vacuum_data_sim.py">
+  </node>
 
 </launch>
