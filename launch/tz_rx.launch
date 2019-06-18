@@ -371,7 +371,7 @@
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
 
   </node>
-<!--
+
 
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
@@ -395,5 +395,4 @@
         name = "vacuum_data_sim"
         type = "vacuum_data_sim.py">
 
--->
 </launch>
