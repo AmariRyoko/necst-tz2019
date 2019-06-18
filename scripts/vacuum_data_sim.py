@@ -7,7 +7,7 @@ import std_msgs.msg
 import threading
 
 
-class sa_data_sim(object):
+class vacuum_data_sim(object):
 
     def __init__(self):
 
@@ -35,7 +35,6 @@ class sa_data_sim(object):
 if __name__ == "__main__":
 
     rospy.init_node(name)
-    sa = temp_data_sim()
-    sa.thread()
-    sa.data()
+    v = vacuum_data_sim()
+    v.thread()
     rospy.spin()
