@@ -379,12 +379,14 @@
 
   </node>
 
+
+
   <node pkg = "necst-tz2019"
         name = "sa_data_sim"
         type = "sa_data_sim.py">
 
   </node>
-
+<!--
   <node pkg = "necst-tz2019"
         name = "temp_data_sim"
         type = "temp_data_sim.py">
@@ -395,5 +397,5 @@
         name = "vacuum_data_sim"
         type = "vacuum_data_sim.py">
   </node>
-
+-->
 </launch>
