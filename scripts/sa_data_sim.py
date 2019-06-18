@@ -1,4 +1,3 @@
-#topic(/dev/n9343c)にデータを投げるだけのsimulator用script(スペアナ用シミュレータ)
 name = "sa_data_sim"
 
 import time
@@ -10,7 +9,6 @@ import threading
 class sa_data_sim(object):
 
     def __init__(self):
-
 
         self.pub_sa_data = rospy.Publisher(
                 name = "/dev/n9343/",
@@ -38,4 +36,3 @@ if __name__ == "__main__":
     sa = sa_data_sim()
     sa.thread()
     sa.data()
-    rospy.spin()
