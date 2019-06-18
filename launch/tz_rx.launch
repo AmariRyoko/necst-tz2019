@@ -80,8 +80,6 @@
 
   </node>
 
-
-
   <node pkg = "necst-tz2019"
         name = "sis_bias_hu_vp_writer"
         type = "relay.py">
@@ -91,8 +89,6 @@
            value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
 
   </node>
-
-  <!--
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_hl_vp_writer"
@@ -204,6 +200,7 @@
 
   </node>
 
+<!--
   <node pkg = "necst-tz2019"
         name = "sg1_freq_reader"
         type = "relay.py">
@@ -223,7 +220,7 @@
 
   </node>
 
-
+-->
 
   <node pkg = "necst-tz2019"
         name = "sg1_freq_writer"
@@ -246,7 +243,7 @@
 
   </node>
 
-
+<!--
   <node pkg = "necst-tz2019"
         name = "sg2_freq_reader"
         type = "relay.py">
@@ -256,6 +253,7 @@
            value = "$(find necst-tz2019)/node_conf/sg2_freq_reader.conf" />
 
   </node>
+-->
 
   <node pkg = "necst-tz2019"
         name = "sg2_freq_writer"
@@ -266,7 +264,7 @@
            value = "$(find necst-tz2019)/node_conf/sg2_writer.conf" />
 
   </node>
-
+<!--
   <node pkg = "necst-tz2019"
         name = "sg2_pw_reader"
         type = "relay.py">
@@ -276,7 +274,7 @@
            value = "$(find necst-tz2019)/node_conf/sg2_pw_reader.conf" />
 
   </node>
-
+-->
   <node pkg = "necst-tz2019"
         name = "sg2_pw_writer"
         type = "relay.py">
@@ -287,6 +285,7 @@
 
   </node>
 
+<!--
   <node pkg = "necst-tz2019"
         name = "lo1_freq_reader"
         type = "relay.py">
@@ -294,7 +293,7 @@
            value = "$(find necst-tz2019)/node_conf/lo1_freq_reader.conf" />
 
   </node>
-
+-->
   <node pkg = "necst-tz2019"
         name = "lo1_freq_writer"
         type = "relay.py">
@@ -303,6 +302,7 @@
 
   </node>
 
+<!--
   <node pkg = "necst-tz2019"
         name = "lo1_pw_reader"
         type = "relay.py">
@@ -310,7 +310,7 @@
            value = "$(find necst-tz2019)/node_conf/lo1_pw_reader.conf" />
 
   </node>
-
+-->
 
   <node pkg = "necst-tz2019"
         name = "lo1_pw_writer"
@@ -371,7 +371,7 @@
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
 
   </node>
-
+<!--
 
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
