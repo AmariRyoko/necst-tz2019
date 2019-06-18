@@ -35,4 +35,3 @@ if __name__ == "__main__":
     rospy.init_node(name)
     sa = sa_data_sim()
     sa.thread()
-    sa.data()
