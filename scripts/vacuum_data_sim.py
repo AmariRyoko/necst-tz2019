@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-name = "temp_data_sim"
+name = "vacuum_data_sim"
 
 import time
 import rospy
@@ -12,7 +12,7 @@ class vacuum_data_sim(object):
     def __init__(self):
 
 
-        self.pub_temp_data = rospy.Publisher(
+        self.pub_vacuum_data = rospy.Publisher(
                 name = "/dev/tpg/usb/f_cmd",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
@@ -21,7 +21,7 @@ class vacuum_data_sim(object):
 
     def data(self):
         while not rospy.is_shutdown():
-            self.pub_sa_data.publish(1)
+            self.pub_vacuum_data.publish(1)
             time.sleep(1)
             continue
 
