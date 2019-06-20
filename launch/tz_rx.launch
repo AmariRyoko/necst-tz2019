@@ -357,8 +357,36 @@
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "dewar_temp_reader"
+        name = "dewar_temp_reader_ch1"
         type = "relay.py">
+    <remap from = '/dev/218/' to = '/dev/218/ip_192_168_100_187_ch1'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "dewar_temp_reader_ch2"
+        type = "relay.py">
+    <remap from = '/dev/218/' to = '/dev/218/ip_192_168_100_187_ch2'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "dewar_temp_reader_ch3"
+        type = "relay.py">
+    <remap from = '/dev/218/' to = '/dev/218/ip_192_168_100_187_ch3'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "dewar_temp_reader_ch4"
+        type = "relay.py">
+    <remap from = '/dev/218/' to = '/dev/218/ip_192_168_100_187_ch4'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
 
