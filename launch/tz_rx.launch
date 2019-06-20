@@ -9,6 +9,14 @@
   </node>
 
   <node pkg = "necst-tz2019"
+        name = "sis_bias_writer_vgap"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_writer_vgap.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
         name = "irr_freq_writer"
         type = "relay.py">
     <param name = "config_file"
