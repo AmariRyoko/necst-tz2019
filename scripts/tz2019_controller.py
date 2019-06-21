@@ -13,6 +13,8 @@ class controller(object):
     def __init__(self):
         self.switch = switch()
         self.losg = losg()
+        self.loatt_h = loatt_h()
+        self.loatt_v = loatt_v()
 
 
 class make_pub(object):
@@ -42,7 +44,7 @@ class switch(object):
     def __init__(self):
         self.make_pub = make_pub()
 
-    def set_if_switch(self, command):
+    def set_ch(self, command):
         topic_name = '/tz2019/switch/cmd'
         data_class = std_msgs.msg.Float64
 
@@ -55,15 +57,41 @@ class losg(object):
     def __init__(self):
         self.make_pub = make_pub()
 
-    def set_losg_freq(self, command):
+    def set_freq(self, command):
         topic_name = '/tz2019/losg/f_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
-    def set_losg_power(self, command):
+    def set_power(self, command):
         topic_name = '/tz2019/losg/p_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+
+class loatt_v(object):
+
+    def __init__(self):
+        self.make_pub = make_pub()
+
+    def set_vol(self, command):
+        topic_name = '/dev/vcva/ip192.168.100.183'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+
+class loatt_v(object):
+
+    def __init__(self):
+        self.make_pub = make_pub()
+
+    def set_vol(self, command):
+        topic_name = '/dev/vcva/ip192.168.100.184'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
