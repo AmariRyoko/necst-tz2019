@@ -72,7 +72,7 @@ class losg(object):
         return
 
 
-class loatt_v(object):
+class loatt_h(object):
 
     def __init__(self):
         self.make_pub = make_pub()

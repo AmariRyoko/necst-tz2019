@@ -17,10 +17,15 @@ g1u = np.
 g2u = np.
 g1l = np.
 g2l = np.
+p1 = #yfactor_upperside
+p2 = #yfactor_lowerside
 
 mu = (g1u)/(g2u)
 ml = (g2l)/(g1l)
-mdsb = ((g1u)+(g1l))/((g2u)+(g2l))
+mdsb = (p1)/(p2)
 
 r1 = mu*((ml)*(mdsb)-1)/((mu)-(mdsb))
 r2 = ml*((mu)-(mdsb))/((ml)*(mdsb)-1)
+
+print('IRR R1: %f' %(r1))
+print('IRR R2: %f' %(r2))
