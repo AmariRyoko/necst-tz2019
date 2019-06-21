@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-name = 'tz2019_tuning_directions'
+name = 'tz2019_loatt_tuning_directions'
 
 import rospy
 import time
-import numpy
 import std_msgs.msg
 
 import tz2019_tuning_controler
