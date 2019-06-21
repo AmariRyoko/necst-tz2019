@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-name = 'calculation_yfactor'
+name = 'calculation_irr'
 
 import rospy
 import std_msgs.msg
@@ -13,10 +13,10 @@ import yfactor_irr_directions
 
 #under the calculation irr
 
-g1u =
-g2u =
-g1l =
-g2l =
+g1u = np.
+g2u = np.
+g1l = np.
+g2l = np.
 
 mu = (g1u)/(g2u)
 ml = (g2l)/(g1l)

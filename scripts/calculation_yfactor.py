@@ -4,14 +4,14 @@ name = 'calculation_yfactor'
 
 import rospy
 import std_msgs.msg
-import numpy
+import numpy as np
 import sys, os, time, datetime
 
 sys.path.append("/ogawa-ros/necst-sisrx/scripts")
 import yfactor_with_set_sis_vol_direction
 
-hot =
-cold = 
+hot = np.array()
+cold = np.array()
 
 #under the calculation
 
@@ -19,4 +19,4 @@ y_db = hot - cold
 y_w = 10^((y_db)/10)
 trx = (300 - 77*(y_w))/((y_w)-1)
 
-print(trx)
+print('Y-factor: %f' %(trx))
