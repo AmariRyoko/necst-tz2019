@@ -19,4 +19,4 @@ y_db = hot - cold
 y_w = 10^((y_db)/10)
 trx = (300 - 77*(y_w))/((y_w)-1)
 
-print('Y-factor: %f' %(trx))
+print('This Dewar Trx (Y-factor): %f' %(trx))
