@@ -13,6 +13,13 @@ rospy.init_node(name)
 loatt_h = tz2019_controller.loatt_v()
 loatt_v = tz2019_controller.loatt_h()
 
+parser = argparse.ArgumentParser(description = 'set Lo Att level of h-band and v-band')
+
+parser.add_argument('loatt_h_tuning', type = float, help = 'set Lo Att level of h-band')
+parser.add_argument('loatt_v_tuning', type = float, help = 'set Lo Att level of v-band')
+
+args = parser.parse_args()
+
 loatt_h_tuning = input("Lo h-band Att tuning vol: ")  #set Lo Att tuning vol
 loatt_v_tuning = input("Lo v-band Att tuning vol: ")
 loatt_h.set_vol(loatt_h_tuning)
