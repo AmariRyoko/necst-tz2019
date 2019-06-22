@@ -20,7 +20,5 @@ parser.add_argument('loatt_v_tuning', type = float, help = 'set Lo Att level of 
 
 args = parser.parse_args()
 
-loatt_h_tuning = input("Lo h-band Att tuning vol: ")  #set Lo Att tuning vol
-loatt_v_tuning = input("Lo v-band Att tuning vol: ")
-loatt_h.set_vol(loatt_h_tuning)
+loatt_h.set_vol(loatt_h_tuning)       #set Lo Att tuning vol
 loatt_v.set_vol(loatt_v_tuning)
