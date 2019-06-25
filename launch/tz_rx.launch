@@ -196,7 +196,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_v2_vp_writer"
+        name = "sis_bias_v2_vp_necst_tz2019_writer"
         type = "relay.py">
     <remap from = '/sis_vp_cmd' to = '/sis_vl/vp_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch4'/>
