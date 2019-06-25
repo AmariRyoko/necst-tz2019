@@ -2,49 +2,195 @@
 
 
 #sis_bias_writer_section
+
+#sis_bias_v_tz2019_dev_writer
   <node pkg = "necst-tz2019"
-        name = "sis_bias_writer"
+        name = "sis_bias_h1_v_tz2019_dev_writwer"
         type = "relay.py">
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h1/v_cmd'/>
+    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch1'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_v_tz2019_dev_writer.conf" />
+
+   </node>
+
+   <node pkg = "necst-tz2019"
+         name = "sis_bias_h2_v_tz2019_dev_writwer"
+         type = "relay.py">
+     <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h2/v_cmd'/>
+     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch2'/>
+     <param name = "config_file"
+            value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+
+    </node>
+
+    <node pkg = "necst-tz2019"
+          name = "sis_bias_v1_v_tz2019_dev_writwer"
+          type = "relay.py">
+      <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v1/v_cmd'/>
+      <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch3'/>
+      <param name = "config_file"
+             value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+
+    </node>
+
+    <node pkg = "necst-tz2019"
+          name = "sis_bias_v2_v_tz2019_dev_writwer"
+          type = "relay.py">
+      <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v2/v_cmd'/>
+      <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch4'/>
+      <param name = "config_file"
+             value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+
+
+#sis_bias_vgap_tz2019_tz2019_writer
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_h1_vgap_tz2019_tz2019_writer"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_h1/vgap_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h1/v_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_tz2019_tz2019_writer.conf" />
 
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_writer_vgap"
+        name = "sis_bias_h2_vgap_tz2019_tz2019_writer"
         type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_h2/vgap_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h2/v_cmd'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_writer_vgap.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_tz2019_tz2019_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v1_vgap_tz2019_tz2019_writer"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_v1/vgap_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v1/v_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_tz2019_tz2019_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v2_vgap_tz2019_tz2019_writer"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_v2/vgap_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v2/v_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_tz2019_tz2019_writer.conf" />
+
+＃sis_bias_vp_tz2019_tz2019
 
   </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_h1_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_hu/vp_cmd'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch1'/>
+    <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_h1/vp_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h1/v_cmd'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_tz2019_tz2019_writer.conf" />
 
   </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_h2_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_hl/vp_cmd'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch2'/>
+    <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_h2/vp_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h2/v_cmd'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_tz2019_tz2019_writer.conf" />
 
   </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_v1_vp_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_vu/vp_cmd'/>
-    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch3'/>
+    <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_v1/vp_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v1/v_cmd'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_tz2019_tz2019_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v2_vp_writer"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_v2/vp_cmd'/>
+    <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v2/v_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_tz2019_tz2019_writer.conf" />
+
+#sis_bias_vgap_necst_tz2019
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_h1_vgap_necst_tz2019"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_h1/vgap_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_h2_vgap_necst_tz2019"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_h2/vgap_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v1_vgap_necst_tz2019"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_v1/vgap_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v2_vgap_necst_tz2019"
+        type = "relay.py">
+    <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_v2/vgap_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+
+#sis_bias_vp1_necst_tz2019_writer
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_h1_vp_necst_tz2019_writer"
+        type = "relay.py">
+    <remap from = '/necst/rx_sis2sb/vp_cmd' to = '/necst/rx_sis2sb/vp1_cmd'/>
+    <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_h1/vp_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_necst_tz2019_writer.conf" />
+
+  </node>
+
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v1_vp_necst_tz2019_writer"
+        type = "relay.py">
+    <remap from = '/necst/rx_sis2sb/vp_cmd' to = '/necst/rx_sis2sb/vp1_cmd'/>
+    <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_v1/vp_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_necst_tz2019_writer.conf" />
+
+#sis_bias_vp2_necst_tz2019_writer
+
+</node>
+
+<node pkg = "necst-tz2019"
+      name = "sis_bias_h2_vp_necst_tz2019_writer"
+      type = "relay.py">
+  <remap from = '/necst/rx_sis2sb/vp_cmd' to = '/necst/rx_sis2sb/vp2_cmd'/>
+  <remap from = '/tz2019/sis_vp_cmd' to = '/tz2019/sis_h2/vp_cmd'/>
+  <param name = "config_file"
+         value = "$(find necst-tz2019)/node_conf/sis_bias_vp_necst_tz2019_writer.conf" />
 
   </node>
 
@@ -54,14 +200,16 @@
     <remap from = '/sis_vp_cmd' to = '/sis_vl/vp_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch4'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_vp_necst_tz2019_writer.conf" />
+
+#sis_bias_i_reader
 
   </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_h1_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_hu/i'/>
+    <remap from = '/sis_i_cmd' to = '/tz2019/sis_h1/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch1'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
@@ -71,7 +219,7 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_h2_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_hl/i'/>
+    <remap from = '/sis_i_cmd' to = '_tz2019/sis_h2/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch2'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
@@ -81,7 +229,7 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_v1_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_vu/i'/>
+    <remap from = '/sis_i_cmd' to = '/tz2019/sis_v1/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch3'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
@@ -91,50 +239,52 @@
   <node pkg = "necst-tz2019"
         name = "sis_bias_v2_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/sis_vl/i'/>
+    <remap from = '/sis_i_cmd' to = '/tz2019/sis_v2/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch4'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
+
+#sis_bias_v_reader
 
   </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_h1_v_reader"
         type = "relay.py">
-    <remap from = '/sis_v_cmd' to = '/sis_hu/v'/>
+    <remap from = '/sis_v_cmd' to = '/tz2019/sis_h1/v'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch5'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
-         </node>
+  </node>
 
-         <node pkg = "necst-tz2019"
-               name = "sis_bias_h2_v_reader"
-               type = "relay.py">
-           <remap from = '/sis_v_cmd' to = '/sis_hl/v'/>
-           <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch6'/>
-           <param name = "config_file"
-                  value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_h2_v_reader"
+        type = "relay.py">
+    <remap from = '/sis_v_cmd' to = '/tz2019/sis_h2/v'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch6'/>
+        <param name = "config_file"
+               value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
-         </node>
+  </node>
 
-         <node pkg = "necst-tz2019"
-               name = "sis_bias_v1_v_reader"
-               type = "relay.py">
-           <remap from = '/sis_v_cmd' to = '/sis_vu/v'/>
-           <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch7'/>
-           <param name = "config_file"
-                  value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v1_v_reader"
+        type = "relay.py">
+    <remap from = '/sis_v_cmd' to = '/tz2019/sis_v1/v'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch7'/>
+        <param name = "config_file"
+               value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
-         </node>
+  </node>
 
-         <node pkg = "necst-tz2019"
-               name = "sis_bias_v2_v_reader"
-               type = "relay.py">
-           <remap from = '/sis_v_cmd' to = '/sis_vl/v'/>
-           <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch8'/>
-           <param name = "config_file"
-                  value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
+  <node pkg = "necst-tz2019"
+        name = "sis_bias_v2_v_reader"
+        type = "relay.py">
+    <remap from = '/sis_v_cmd' to = '/tz2019/sis_v2/v'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch8'/>
+        <param name = "config_file"
+               value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
 
 #loatt_section
