@@ -326,11 +326,9 @@ sis_bias_v_tz2019_dev_writer -->
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/loatt_dev_writer.conf" />
 
-
-
-#lo_section
   </node>
 
+#lo_section
   <node pkg = "necst-tz2019"
         name = "losg_fcmd_writer"
         type = "relay.py">
@@ -369,32 +367,29 @@ sis_bias_v_tz2019_dev_writer -->
     <param name = "config_file"
           　value = "$(find necst-tz2019)/node_conf/lo1_pw_writer.conf" />
 
-        </node>
+  </node>
 
-        <node pkg = "necst-tz2019"
-              name = "sg1_freq_writer"
-              type = "relay.py">
-          <remap from = '/sg_cmd' to = '/sg1/f_cmd'/>
-          <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/f_cmd'/>
-          <param name = "config_file"
-                 value = "$(find necst-tz2019)/node_conf/sg1_writer.conf" />
-
-        </node>
-
-
-        <node pkg = "necst-tz2019"
-              name = "sg1_pw_writer"
-              type = "relay.py">
-          <remap from = '/sg_cmd' to = '/sg1/p_cmd'/>
-          <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/p_cmd'/>
-          <param name = "config_file"
-                 value = "$(find necst-tz2019)/node_conf/sg1_writer.conf" />
-
-
-#irr_section
+  <node pkg = "necst-tz2019"
+        name = "sg1_freq_writer"
+        type = "relay.py">
+    <remap from = '/sg_cmd' to = '/sg1/f_cmd'/>
+    <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/f_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg1_writer.conf" />
 
   </node>
 
+  <node pkg = "necst-tz2019"
+        name = "sg1_pw_writer"
+        type = "relay.py">
+    <remap from = '/sg_cmd' to = '/sg1/p_cmd'/>
+    <remap from = '/dev/e8247c/ip' to = '/dev/e8237c/ip_192_168_100_181/p_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-tz2019)/node_conf/sg1_writer.conf" />
+
+  </node>
+  
+#irr_section
   <node pkg = "necst-tz2019"
         name = "sg_irr_tz2019_dev_writer"
         type = "relay.py">
