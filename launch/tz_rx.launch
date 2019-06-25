@@ -469,13 +469,6 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
 
-  <node pkg = "necst-tz2019"
-        name = "switch_writer"
-        type = "relay.py">
-    <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/switch_writer.conf" />
-  </node>
-
 <!--dewar_temp_section-->
   <node pkg = "necst-tz2019"
         name = "dewar_temp_reader_ch1"
