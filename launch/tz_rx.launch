@@ -220,7 +220,7 @@ sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
         name = "sis_bias_h2_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '_tz2019/sis_h2/i'/>
+    <remap from = '/sis_i_cmd' to = '/tz2019/sis_h2/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch2'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
