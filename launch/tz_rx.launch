@@ -286,7 +286,7 @@ sis_bias_v_tz2019_dev_writer -->
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
-<!--
+
 #loatt_section
   </node>
 
@@ -521,21 +521,18 @@ sis_bias_v_tz2019_dev_writer -->
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
 
-
-
-#dewar_press_section
   </node>
 
+#dewar_press_section
   <node pkg = "necst-tz2019"
         name = "dewar_vacuum_reader"
         type = "relay.py">
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
 
-#sim_section
   </node>
 
-
+#sim_section
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
         type = "sis_iv_sim.py">
@@ -558,5 +555,6 @@ sis_bias_v_tz2019_dev_writer -->
         name = "vacuum_data_sim"
         type = "vacuum_data_sim.py">
 
--->
+  </node>
+
 </launch>
