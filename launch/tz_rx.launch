@@ -1,6 +1,5 @@
 <launch>
 
-
 <!-- sis_bias_writer_section
 
 sis_bias_v_tz2019_dev_writer -->
@@ -135,6 +134,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_h1/vgap_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+  </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_h2_vgap_necst_tz2019"
@@ -142,6 +142,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_h2/vgap_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+  </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_v1_vgap_necst_tz2019"
@@ -149,6 +150,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/tz2019/sis_vgap_cmd' to = '/tz2019/sis_v1/vgap_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vgap_necst_tz2019_writer.conf" />
+  </node>
 
   <node pkg = "necst-tz2019"
         name = "sis_bias_v2_vgap_necst_tz2019"
