@@ -286,10 +286,9 @@ sis_bias_v_tz2019_dev_writer -->
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
-
-#loatt_section
   </node>
-
+<!--
+#loatt_section
   <node pkg = "necst-tz2019"
         name = "loatth_icmd_writer"
         type = "relay.py">
@@ -349,7 +348,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "lo1st_freq_writer"
         type = "relay.py">
     <param name = "config_file"
-          　value = "$(find necst-tz2019)/node_conf/lo1st_freq_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/lo1st_freq_writer.conf" />
 
   </node>
 
@@ -388,7 +387,7 @@ sis_bias_v_tz2019_dev_writer -->
            value = "$(find necst-tz2019)/node_conf/sg1_writer.conf" />
 
   </node>
-  
+
 #irr_section
   <node pkg = "necst-tz2019"
         name = "sg_irr_tz2019_dev_writer"
