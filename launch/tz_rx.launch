@@ -354,7 +354,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "lo1st_power_writer"
         type = "relay.py">
     <param name = "config_file"
-          　value = "$(find necst-tz2019)/node_conf/lo1st_power_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/lo1st_power_writer.conf" />
   </node>
 
 
@@ -362,7 +362,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "lo1_pw_writer"
         type = "relay.py">
     <param name = "config_file"
-          　value = "$(find necst-tz2019)/node_conf/lo1_pw_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/lo1_pw_writer.conf" />
   </node>
 
 
@@ -524,7 +524,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
 
-<!--sim_section-->
+<!--sim_section
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
         type = "sis_iv_sim.py">
@@ -534,8 +534,8 @@ sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
         name = "sa_data_sim"
         type = "sa_data_sim.py">
-
   </node>
+
 
   <node pkg = "necst-tz2019"
         name = "temp_data_sim"
@@ -548,5 +548,5 @@ sis_bias_v_tz2019_dev_writer -->
         type = "vacuum_data_sim.py">
   </node>
 
-
+-->
 </launch>
