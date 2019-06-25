@@ -1,9 +1,9 @@
 <launch>
 
 
-#sis_bias_writer_section
+<!-- sis_bias_writer_section
 
-#sis_bias_v_tz2019_dev_writer
+sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
         name = "sis_bias_h1_v_tz2019_dev_writwer"
         type = "relay.py">
@@ -286,7 +286,7 @@
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
-
+<!--
 #loatt_section
   </node>
 
@@ -534,7 +534,7 @@
 
 #sim_section
   </node>
-<!--
+
 
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
