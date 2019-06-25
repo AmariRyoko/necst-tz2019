@@ -296,7 +296,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
 
-   <node pkg = "necst-tz2019"
+  <node pkg = "necst-tz2019"
         name = "loattv_icmd_writer"
         type = "relay.py">
     <remap from = '/tz2019/loatt/i_cmd' to = '/tz2019/loatt_v/i_cmd'/>
