@@ -389,7 +389,7 @@ sis_bias_v_tz2019_dev_writer -->
 
 <!--irr_section-->
   <node pkg = "necst-tz2019"
-        name = "sg_irr_tz2019_dev_writer"
+        name = "sg_irr_freq_tz2019_dev_writer"
         type = "relay.py">
     <remap from = '/tz2019/sg_irr' to = '/tz2019/sg_irr/f_cmd'/>
     <remap from = '/dev/fsw0020/ip' to = '/dev/fsw0020/ip_192_168_100_182/f_cmd'/>
@@ -399,7 +399,7 @@ sis_bias_v_tz2019_dev_writer -->
 
 
   <node pkg = "necst-tz2019"
-        name = "sg_irr_tz2019_dev_writer"
+        name = "sg_irr_power_tz2019_dev_writer"
         type = "relay.py">
     <remap from = '/tz2019/sg_irr' to = '/tz2019/sg_irr/p_cmd'/>
     <remap from = '/dev/fsw0020/ip' to = '/dev/fsw0020/ip_192_168_100_182/p_cmd'/>
