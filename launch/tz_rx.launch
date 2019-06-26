@@ -415,7 +415,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sg_irr_necst_tz2019_power_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sg_irr_necst_tz2019_poer_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sg_irr_necst_tz2019_power_writer.conf" />
   </node>
 
 
