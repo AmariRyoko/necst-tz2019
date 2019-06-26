@@ -342,7 +342,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sg_lo_necst_tz2019_freq_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sg_lo_freq_necst_tz2019_freq_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sg_lo_necst_tz2019_freq_writer.conf" />
   </node>
 
 
@@ -350,7 +350,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sg_lo_necst_tz2019_power_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sg_lo_power_necst_tz2019_power_writer.conf" />
+           value = "$(find necst-tz2019)/node_conf/sg_lo_necst_tz2019_power_writer.conf" />
   </node>
 
 
@@ -384,14 +384,14 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sg_irr_tz2019_dev_freq_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sg_irr_tz2019_dev_freq_writer.con" />
+           value = "$(find necst-tz2019)/node_conf/sg_irr_tz2019_dev_freq_writer.conf" />
   </node>
 
   <node pkg = "necst-tz2019"
         name = "sg_irr_tz2019_dev_power_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sg_irr_tz2019_dev_power_writer.con" />
+           value = "$(find necst-tz2019)/node_conf/sg_irr_tz2019_dev_power_writer.conf" />
   </node>
 
 
@@ -399,7 +399,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sg_irr_tz2019_dev_onoff_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sg_irr_tz2019_dev_onoff_writer.con" />
+           value = "$(find necst-tz2019)/node_conf/sg_irr_tz2019_dev_onoff_writer.conf" />
   </node>
 
 
