@@ -13,7 +13,7 @@ class vacuum_data_sim(object):
 
 
         self.pub_vacuum_data = rospy.Publisher(
-                name = "/dev/tpg/usb/f_cmd",
+                name = "/dev/tpg/usb/press",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,

@@ -12,7 +12,7 @@ class sa_data_sim(object):
     def __init__(self):
 
         self.pub_sa_data = rospy.Publisher(
-                name = "/dev/n9343/",
+                name = "/dev/n9343c/ip192_168_100_185/spec",
                 data_class = std_msgs.msg.Float64,
                 latch = True,
                 queue_size = 1,
