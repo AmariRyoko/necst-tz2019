@@ -506,8 +506,9 @@ sis_bias_v_tz2019_dev_writer -->
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
   </node>
 
+<!--
 
-<!--sim_section-->
+
   <node pkg = "necst-tz2019"
         name = "sis_iv_sim"
         type = "sis_iv_sim.py">
@@ -531,10 +532,7 @@ sis_bias_v_tz2019_dev_writer -->
         type = "vacuum_data_sim.py">
   </node>
 
-  <node pkg = "necst-sisrx"
-        name = "sis_bias_curve_with_first_set_loatt_level_direction"
-        type = "sis_bias_curve_with_first_set_loatt_level_direction.py">
-  </node>
+-->
 
 
 </launch>
