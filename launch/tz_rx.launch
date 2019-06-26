@@ -287,7 +287,10 @@ sis_bias_v_tz2019_dev_writer -->
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
   </node>
-<!--loatt_section -->
+
+
+
+<!--loatt_section
 
   <node pkg = "necst-tz2019"
         name = "loatth_icmd_writer"
@@ -326,8 +329,9 @@ sis_bias_v_tz2019_dev_writer -->
            value = "$(find necst-tz2019)/node_conf/loatt_dev_writer.conf" />
   </node>
 
+-->
 
-<!--sg_lo_section-->
+<!--sg_lo_section
 
 
   <node pkg = "necst-tz2019"
@@ -377,9 +381,9 @@ sis_bias_v_tz2019_dev_writer -->
            value = "$(find necst-tz2019)/node_conf/sg_lo_tz2019_dev_onoff_writer.conf" />
   </node>
 
+-->
 
-
-<!--sg_irr_section-->
+<!--sg_irr_section
   <node pkg = "necst-tz2019"
         name = "sg_irr_tz2019_dev_freq_writer"
         type = "relay.py">
@@ -426,10 +430,10 @@ sis_bias_v_tz2019_dev_writer -->
           value = "$(find necst-tz2019)/node_conf/sg_irr_necst_necst_freq_writer.conf" />
   </node>
 
+-->
 
 
-
-<!--sa_section-->
+<!--sa_section
 
 
   <node pkg = "necst-tz2019"
@@ -438,9 +442,9 @@ sis_bias_v_tz2019_dev_writer -->
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sa_reader.conf" />
   </node>
+-->
 
-
-<!--switch_section-->
+<!--switch_section
   <node pkg = "necst-tz2019"
         name = "switch_cmd_writer"
         type = "relay.py">
@@ -455,9 +459,9 @@ sis_bias_v_tz2019_dev_writer -->
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/switch_writer.conf" />
   </node>
+-->
 
-
-<!--dewar_temp_section-->
+<!--dewar_temp_section
   <node pkg = "necst-tz2019"
         name = "dewar_temp_reader_ch1"
         type = "relay.py">
@@ -497,14 +501,17 @@ sis_bias_v_tz2019_dev_writer -->
            value = "$(find necst-tz2019)/node_conf/dewar_temp_reader.conf" />
   </node>
 
+-->
 
-<!--dewar_press_section-->
+<!--dewar_press_section
   <node pkg = "necst-tz2019"
         name = "dewar_vacuum_reader"
         type = "relay.py">
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/dewar_vacuum_reader.conf" />
   </node>
+
+-->
 
 <!--
 
@@ -533,6 +540,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
 -->
+
 
 
 </launch>
