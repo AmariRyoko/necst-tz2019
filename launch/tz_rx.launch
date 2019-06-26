@@ -181,7 +181,7 @@ sis_bias_v_tz2019_dev_writer -->
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vp_necst_tz2019_writer.conf" />
 
-<!--sis_bias_vp2_necst_tz2019_writer-->
+<!--sis_bias_vp_necst_tz2019_writer-->
 
   </node>
 
@@ -198,7 +198,7 @@ sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
         name = "sis_bias_v2_vp_necst_tz2019_writer"
         type = "relay.py">
-    <remap from = '/sis_vp_cmd' to = '/sis_vl/vp_cmd'/>
+    <remap from = '/sis_vp_cmd' to = '/sis_v2/vp_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch4'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_vp_necst_tz2019_writer.conf" />
