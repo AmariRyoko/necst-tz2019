@@ -531,4 +531,10 @@ sis_bias_v_tz2019_dev_writer -->
         type = "vacuum_data_sim.py">
   </node>
 
+  <node pkg = "necst-sisrx"
+        name = "sis_bias_curve_with_first_set_loatt_level_direction"
+        type = "sis_bias_curve_with_first_set_loatt_level_direction.py">
+  </node>
+
+
 </launch>
