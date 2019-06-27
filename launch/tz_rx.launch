@@ -223,7 +223,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/sis_i_cmd' to = '/tz2019/sis_v1/v'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch2'/>
     <param name = "config_file"
-           value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
+           value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
   </node>
 
@@ -243,7 +243,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/sis_i_cmd' to = '/tz2019/sis_h1/v'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch4'/>
         <param name = "config_file"
-               value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
+               value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
 <!--sis_bias_v_reader-->
 
@@ -255,7 +255,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/sis_v_cmd' to = '/tz2019/sis_h2/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch5'/>
         <param name = "config_file"
-               value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
+               value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
 
   </node>
 
@@ -275,7 +275,7 @@ sis_bias_v_tz2019_dev_writer -->
     <remap from = '/sis_v_cmd' to = '/tz2019/sis_v2/i'/>
     <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch7'/>
         <param name = "config_file"
-               value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
+               value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
 
   </node>
 
