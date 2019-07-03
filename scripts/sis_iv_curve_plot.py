@@ -2,13 +2,21 @@
 
 name = 'sis_iv_curve_plot'
 
-import os, sys, time, datetime
-import rospy
-import numpy
+import os, sys
 import matplotlib.pyplot as plt
 import std_msgs.msg
+import pandas
 
-import sis_bias_curve_with_first_set_loatt_level_direction
+import necstdb
+
+parser = argparse.ArgumentParser(description = 'search optical Lo Att voltage value')
+
+parser.add_argument('save_name', type = str, help = 'set saving file name')
+
+args = parser.parse_args()
+
+db = necstdb.necstdb()
+db.open(file_name)
 
 #under the i-v graph plot
 
