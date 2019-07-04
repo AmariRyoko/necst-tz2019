@@ -11,7 +11,8 @@ import necstdb
 
 parser = argparse.ArgumentParser(description = 'search optical Lo Att voltage value')
 
-parser.add_argument('file_name', type = str, help = 'set saving file name')
+parser.add_argument('file_name', type = str, help = 'saved file name when measure I-V curve')
+parser.add_argument('sive_name', type = str, help = 'set saving I-V graph file name')
 
 args = parser.parse_args()
 
@@ -45,9 +46,13 @@ ax[0].plot(dd['V1V'], dd['V1I'], '.')
 ax[1].plot(dd['H1V'], dd['H1I'], '.')
 ax[2].plot(dd['V2V'], dd['V2I'], '.')
 ax[3].plot(dd['H2V'], dd['H2I'], '.')
+ax[0].set_title('V1 I-V')
+ax[1].set_title('H1 I-V')
+ax[2].set_title('H2 I-V')
+ax[3].set_title('V2 I-V')
 [_.set_xlabel('Voltage (mV)') for _ in ax]
 [_.set_ylabel('Current (uA)') for _ in ax]
 [_.grid(True, linestyle=':') for _ in ax]
 
-plt.savefig('tz_iv_curve_.png')
+plt.savefig(save_name)
 plt.show()
