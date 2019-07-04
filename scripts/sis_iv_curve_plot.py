@@ -17,7 +17,7 @@ parser.add_argument('sive_name', type = str, help = 'set saving I-V graph file n
 args = parser.parse_args()
 
 db = necstdb.necstdb()
-db.open(file_name)
+db.open(args.file_name)
 
 d = db.read_as_pandas()
 d['time'] = pandas.to_datetime(d['time'], unit='s')
@@ -54,5 +54,5 @@ ax[3].set_title('V2 I-V')
 [_.set_ylabel('Current (uA)') for _ in ax]
 [_.grid(True, linestyle=':') for _ in ax]
 
-plt.savefig(save_name)
+plt.savefig(args.save_name)
 plt.show()
