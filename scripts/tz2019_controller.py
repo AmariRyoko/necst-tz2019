@@ -11,8 +11,10 @@ import std_msgs.msg
 class controller(object):
 
     def __init__(self):
+        self.sis = sis()
         self.switch = switch()
-        self.losg = losg()
+        self.sglo1 = sglo1()
+        self.sgirr = sgirr()
         self.loatt_h = loatt_h()
         self.loatt_v = loatt_v()
 
@@ -38,6 +40,95 @@ class make_pub(object):
             pass
         return
 
+class sis(object):
+
+    def __init__(self):
+        self.make_pub = make_pub()
+
+    def set_v1_vp(self, command):
+        topic_name = '/tz2019/sis_v1/vp_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_h1_vp(self, command):
+        topic_name = '/tz2019/sis_h1/vp_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_h2_vp(self, command):
+        topic_name = '/tz2019/sis_h2/vp_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_v2_vp(self, command):
+        topic_name = '/tz2019/sis_v2/vp_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_v1_vgap(self, command):
+        topic_name = '/tz2019/sis_v1/vgap_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_h1_vgap(self, command):
+        topic_name = '/tz2019/sis_h1/vgap_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_h2_vgap(self, command):
+        topic_name = '/tz2019/sis_h2/vgap_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_v2_vgap(self, command):
+        topic_name = '/tz2019/sis_v2/vgap_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_v1_v(self, command):
+        topic_name = '/tz2019/sis_v1/v_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_h1_v(self, command):
+        topic_name = '/tz2019/sis_h1/v_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_h2_v(self, command):
+        topic_name = '/tz2019/sis_h2/v_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_v2_v(self, command):
+        topic_name = '/tz2019/sis_v2/v_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
 
 class switch(object):
 
@@ -45,27 +136,61 @@ class switch(object):
         self.make_pub = make_pub()
 
     def set_ch(self, command):
-        topic_name = '/tz2019/switch/cmd'
+        topic_name = '/tz2019/if_switch/ch_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
 
-class losg(object):
+class sglo1(object):
 
     def __init__(self):
         self.make_pub = make_pub()
 
     def set_freq(self, command):
-        topic_name = '/tz2019/losg/f_cmd'
+        topic_name = '/tz2019/sg_lo1/f_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
     def set_power(self, command):
-        topic_name = '/tz2019/losg/p_cmd'
+        topic_name = '/tz2019/sg_lo1/p_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_onoff(self, command):
+        topic_name = '/tz2019/sg_lo1/onoff_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+
+class sgirr(object):
+
+    def __init__(self):
+        self.make_pub = make_pub()
+
+    def set_freq(self, command):
+        topic_name = '/tz2019/sg_irr/f_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_power(self, command):
+        topic_name = '/tz2019/sg_irr/p_cmd'
+        data_class = std_msgs.msg.Float64
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_onoff(self, command):
+        topic_name = '/tz2019/sg_irr/onoff_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
@@ -77,8 +202,8 @@ class loatt_h(object):
     def __init__(self):
         self.make_pub = make_pub()
 
-    def set_vol(self, command):
-        topic_name = '/dev/vcva/ip192.168.100.183'
+    def set_cur(self, command):
+        topic_name = '/tz2019/loatt_h/i_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
@@ -90,8 +215,8 @@ class loatt_v(object):
     def __init__(self):
         self.make_pub = make_pub()
 
-    def set_vol(self, command):
-        topic_name = '/dev/vcva/ip192.168.100.184'
+    def set_cur(self, command):
+        topic_name = '/tz2019/loatt_v/i_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
