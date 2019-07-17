@@ -290,7 +290,7 @@ sis_bias_v_tz2019_dev_writer -->
 
 
 
-<!--loatt_section
+<!--loatt_section-->
 
   <node pkg = "necst-tz2019"
         name = "loatth_icmd_writer"
@@ -313,7 +313,7 @@ sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
         name = "tz2019_loatth_dev_writer"
         type = "relay.py">
-    <remap from = '/dev/gpdvc15_100rs/i_cmd' to = '/dev/gpdvc15_100rs/ip_192_168_100_183/i_cmd'/>
+    <remap from = '/dev/gpdvc15_100rs/i_cmd' to = '/dev/gpdvc15_100rs/ip_192_168_100_44/port_4/i_cmd'/>
     <remap from = '/tz2019/loatt/i_cmd' to = '/tz2019/loatt_h/i_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/loatt_dev_writer.conf" />
@@ -323,12 +323,11 @@ sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
         name = "tz2019_loattv_dev_writer"
         type = "relay.py">
-    <remap from = '/dev/gpdvc15_100rs/i_cmd' to = '/dev/gpdvc15_100rs/ip_192_168_100_184/i_cmd'/>
+    <remap from = '/dev/gpdvc15_100rs/i_cmd' to = '/dev/gpdvc15_100rs/ip_192_168_100_44/port_5/i_cmd'/>
     <remap from = '/tz2019/loatt/i_cmd' to = '/tz2019/loatt_v/i_cmd'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/loatt_dev_writer.conf" />
   </node>
--->
 
 
 <!--sg_lo_section-->
