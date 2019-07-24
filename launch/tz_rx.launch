@@ -217,7 +217,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_v1_i_reader"
         type = "relay.py">
     <remap from = '/sis_i_cmd' to = '/tz2019/sis_v1/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch17'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch9'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
 
@@ -227,7 +227,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_h1_i_reader"
         type = "relay.py">
     <remap from = '/sis_v_cmd' to = '/tz2019/sis_v1/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch18'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch11'/>
     <param name = "config_file"
            value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
@@ -237,7 +237,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_h2_i_reader"
         type = "relay.py">
     <remap from = '/sis_i_cmd' to = '/tz2019/sis_h1/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch19'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch13'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
 
@@ -247,7 +247,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_v2_i_reader"
         type = "relay.py">
     <remap from = '/sis_v_cmd' to = '/tz2019/sis_h1/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch20'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch15'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
@@ -260,7 +260,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_v1_v_reader"
         type = "relay.py">
     <remap from = '/sis_i_cmd' to = '/tz2019/sis_h2/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch21'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch10'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
 
@@ -270,7 +270,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_h1_v_reader"
         type = "relay.py">
     <remap from = '/sis_v_cmd' to = '/tz2019/sis_h2/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch22'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch12'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
 
@@ -280,7 +280,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_h2_v_reader"
         type = "relay.py">
     <remap from = '/sis_i_cmd' to = '/tz2019/sis_v2/i'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch23'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch14'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_i_reader.conf" />
 
@@ -290,7 +290,7 @@ sis_bias_v_tz2019_dev_writer -->
         name = "sis_bias_v2_v_reader"
         type = "relay.py">
     <remap from = '/sis_v_cmd' to = '/tz2019/sis_v2/v'/>
-    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch24'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch16'/>
         <param name = "config_file"
                value = "$(find necst-tz2019)/node_conf/sis_bias_v_reader.conf" />
   </node>
