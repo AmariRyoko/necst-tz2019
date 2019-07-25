@@ -48,7 +48,7 @@ def iv_plot(file_name, save_name):
 
     #plt.suptitle('att_level = %d'%(att_vol))
     #plt.show()
-    graph_file_name = '/home/exito/data/logger/test/' + str(save_name) + '/att_level=' + str(att_vol) +'.png'
+    graph_file_name = '/home/exito/data/logger/test/' + str(save_name) +'.png'
     plt.savefig(graph_file_name)
 
     return graph_file_name
