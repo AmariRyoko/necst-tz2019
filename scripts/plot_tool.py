@@ -46,7 +46,7 @@ def iv_plot(file_name, save_name):
     [_.set_ylabel('Current (uA)') for _ in ax]
     [_.grid(True, linestyle=':') for _ in ax]
 
-    #plt.suptitle('att_level = %d'%(att_vol))
+    plt.suptitle(str(save_name))
     #plt.show()
     graph_file_name = '/home/exito/data/logger/test/' + str(save_name) +'.png'
     plt.savefig(graph_file_name)
