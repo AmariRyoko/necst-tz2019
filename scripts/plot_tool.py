@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def iv_plot(file_name, save_name):
     import os, sys
     import matplotlib.pyplot as plt
