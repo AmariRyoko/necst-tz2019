@@ -21,7 +21,7 @@ db.open(args.file_name)
 
 d = db.read_as_pandas()
 d['time'] = pandas.to_datetime(d['time'], unit='s')
-d['data'] = [_[0][data] for _ in d['msgs']]
+d['data'] = [_[0]['data'] for _ in d['msgs']]
 d2 = d.set_index(['topic', 'time']).sort_index()
 
 dd = pandas.concat(
