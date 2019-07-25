@@ -36,8 +36,8 @@ def iv_plot(file_name, save_name):
     ax = [fig.add_subplot(2, 2, i) for i in range(1, 5)]
     ax[0].plot(dd['V1V'], dd['V1I'], '.')
     ax[1].plot(dd['H1V'], dd['H1I'], '.')
-    ax[2].plot(dd['V2V'], dd['V2I'], '.')
-    ax[3].plot(dd['H2V'], dd['H2I'], '.')
+    ax[2].plot(dd['H2V'], dd['H2I'], '.')
+    ax[3].plot(dd['V2V'], dd['V2I'], '.')
     ax[0].set_title('V1 I-V')
     ax[1].set_title('H1 I-V')
     ax[2].set_title('H2 I-V')
@@ -91,8 +91,8 @@ def att_iv_plot(file_name, save_name, att_vol):
     ax = [fig.add_subplot(2, 2, i) for i in range(1, 5)]
     ax[0].plot(dd['V1V'], dd['V1I'], '.')
     ax[1].plot(dd['H1V'], dd['H1I'], '.')
-    ax[2].plot(dd['V2V'], dd['V2I'], '.')
-    ax[3].plot(dd['H2V'], dd['H2I'], '.')
+    ax[2].plot(dd['H2V'], dd['H2I'], '.')
+    ax[3].plot(dd['V2V'], dd['V2I'], '.')
     ax[0].set_title('V1 I-V')
     ax[1].set_title('H1 I-V')
     ax[2].set_title('H2 I-V')
