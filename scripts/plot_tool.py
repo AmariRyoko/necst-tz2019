@@ -103,7 +103,7 @@ def att_iv_plot(file_name, save_name, att_vol):
 
     plt.suptitle('att_level = ' + str(att_vol))
     #plt.show()
-    graph_file_name = '/home/exito/data/logger/test/' + str(file_name) + '/att_level=' + str(att_vol) +'.png'
+    graph_file_name = '/home/exito/data/logger/test/' + str(save_name) + '/att_level=' + str(att_vol) +'.png'
     plt.savefig(graph_file_name)
 
 if __name__ == '__main__':
