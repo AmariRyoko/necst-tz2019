@@ -7,7 +7,7 @@ import pandas
 
 import necstdb
 
-def iv_plot(self, file_name, save_name):
+def iv_plot(file_name, save_name):
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
@@ -54,7 +54,7 @@ def iv_plot(self, file_name, save_name):
 
 
 
-def att_iv_plot(self, file_name, save_name, att_vol):
+def att_iv_plot(file_name, save_name, att_vol):
 
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
@@ -99,5 +99,31 @@ def att_iv_plot(self, file_name, save_name, att_vol):
     graph_file_name = '/home/exito/data/logger/test/' + str(save_name) + '/fig_att_level=' + str(att_vol) +'.png'
     plt.savefig(graph_file_name)
 
-    if __name__ == '__main__':
-    iv_plot(file_name, save_name)
+def yfactor_prot(file_name, save_name):
+
+    db = necstdb.necstdb()  #plot graph
+    db.open(file_name)
+
+    d = db.read_as_pandas()
+    d['time'] = pandas.to_datetime(d['time'], unit='s')
+    d['data'] = [_[0]['data'] for _ in d['msgs']]
+    d2 = d.set_index(['topic', 'time']).sort_index()
+
+    dd = pandas.concat(
+        [
+            d2.loc['/dev/ma24126a/power'][['data']].rename(columns={'data': 'power'}).astype(float).resample('1S').mean(),
+        ],
+        axis = 1,
+    )
+
+    fig = matplotlib.pyplot.figure(figsize=(8,4))
+    ax = fig.add_subplot(111)
+    ax.plot(dd['power'])
+    ax.set_xlabel('time')
+    ax.set_ylabel('power (dBm)')
+    ax.set_title('yfactor-measurement')
+    ax.grid(True)
+    fig.savefig('/home/exito/data/logger/' + str(save_name)'.png')
+
+if __name__ == '__main__':
+iv_plot(file_name, save_name)
