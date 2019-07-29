@@ -26,7 +26,7 @@ def iv_plot(file_name, save_name):
             d2.loc['/tz2019/sis_v2/i'][['data']].rename(columns={'data': 'V2I'}).astype(float).resample('0.1S').mean(),
             d2.loc['/tz2019/sis_h2/v'][['data']].rename(columns={'data': 'H2V'}).astype(float).resample('0.1S').mean(),
             d2.loc['/tz2019/sis_h2/i'][['data']].rename(columns={'data': 'H2I'}).astype(float).resample('0.1S').mean(),
-            d2.loc['/dev/ma24126a/power'][['data']].rename(columns={'data': 'power'}).astype(float).resample('0.1S').mean(),
+            #d2.loc['/dev/ma24126a/power'][['data']].rename(columns={'data': 'power'}).astype(float).resample('0.1S').mean(),
         ],
         axis = 1,
     )
@@ -36,7 +36,7 @@ def iv_plot(file_name, save_name):
     fig = plt.figure(figsize=(7, 6))
     ax = [fig.add_subplot(2, 2, i) for i in range(1, 5)]
     ax[0].plot(dd['V1V'], dd['V1I'], '.')
-    ax[0].plot(dd['V1V'], dd['power'], '.')
+    #ax[0].plot(dd['V1V'], dd['power'], '.')
     ax[1].plot(dd['H1V'], dd['H1I'], '.')
     ax[2].plot(dd['H2V'], dd['H2I'], '.')
     ax[3].plot(dd['V2V'], dd['V2I'], '.')
