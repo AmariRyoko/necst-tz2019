@@ -100,7 +100,7 @@ def att_iv_plot(file_name, save_name, att_vol):
     plt.savefig(graph_file_name)
 
 def yfactor_prot(file_name, save_name):
-
+    
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
