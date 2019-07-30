@@ -134,7 +134,7 @@ def yfactor_prot(file_name, save_name):
     ax.set_ylabel('power (dBm)')
     ax.set_title('yfactor-measurement')
     ax.grid(True)
-    fig.savefig('/home/exito/data/logger/' + str(save_name)'.png')
+    fig.savefig('/home/exito/data/logger/' + str(save_name) +'.png')
 
 if __name__ == '__main__':
 iv_plot(file_name, save_name)
