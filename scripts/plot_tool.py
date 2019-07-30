@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
-import os, sys
-import matplotlib.pyplot as plt
-import std_msgs.msg
-import pandas
 
-import necstdb
 
 def iv_plot(file_name, save_name):
+    import os, sys
+    import matplotlib.pyplot as plt
+    import std_msgs.msg
+    import pandas
+
+    import necstdb
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
@@ -55,6 +56,12 @@ def iv_plot(file_name, save_name):
 
 
 def att_iv_plot(file_name, save_name, att_vol):
+    import os, sys
+    import matplotlib.pyplot as plt
+    import std_msgs.msg
+    import pandas
+
+    import necstdb
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
@@ -98,7 +105,13 @@ def att_iv_plot(file_name, save_name, att_vol):
     graph_file_name = '/home/exito/data/logger/test/' + str(save_name) + '/fig_att_level=' + str(att_vol) +'.png'
     plt.savefig(graph_file_name)
 
-def yfactor_prot(file_name, save_name):    
+def yfactor_prot(file_name, save_name):
+    import os, sys
+    import matplotlib.pyplot as plt
+    import std_msgs.msg
+    import pandas
+
+    import necstdb
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
