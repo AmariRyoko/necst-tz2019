@@ -55,7 +55,6 @@ def iv_plot(file_name, save_name):
 
 
 def att_iv_plot(file_name, save_name, att_vol):
-
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
@@ -99,8 +98,7 @@ def att_iv_plot(file_name, save_name, att_vol):
     graph_file_name = '/home/exito/data/logger/test/' + str(save_name) + '/fig_att_level=' + str(att_vol) +'.png'
     plt.savefig(graph_file_name)
 
-def yfactor_prot(file_name, save_name):
-    
+def yfactor_prot(file_name, save_name):    
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
