@@ -127,7 +127,7 @@ def yfactor_prot(file_name, save_name):
         axis = 1,
     )
 
-    fig = matplotlib.pyplot.figure(figsize=(8,4))
+    fig = plt.figure(figsize=(8,4))
     ax = fig.add_subplot(111)
     ax.plot(dd['power'])
     ax.set_xlabel('time')
