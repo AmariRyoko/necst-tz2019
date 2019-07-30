@@ -122,7 +122,7 @@ def yfactor_prot(file_name, save_name):
 
     dd = pandas.concat(
         [
-            d2.loc['/dev/ma24126a/power'][['data']].rename(columns={'data': 'power'}).astype(float).resample('1S').mean(),
+            d2.loc['/dev/ma24126a/power'][['data']].rename(columns={'data': 'power'}).astype(float).resample('0.1S').mean(),
         ],
         axis = 1,
     )
