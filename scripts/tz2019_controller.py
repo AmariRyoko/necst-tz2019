@@ -133,9 +133,16 @@ class switch(object):
     def __init__(self):
         self.make_pub = make_pub()
 
-    def set_ch(self, command):
-        topic_name = '/tz2019/if_switch/ch_cmd'
-        data_class = std_msgs.msg.Float64
+    def set_open_ch(self, command):
+        topic_name = '/tz2019/if_switch/open_ch_cmd'
+        data_class = std_msgs.msg.String
+
+        self.make_pub.publish(topic_name, data_class, msg = command)
+        return
+
+    def set_close_ch(self, command):
+        topic_name = '/tz2019/if_switch/close_ch_cmd'
+        data_class = std_msgs.msg.String
 
         self.make_pub.publish(topic_name, data_class, msg = command)
         return
