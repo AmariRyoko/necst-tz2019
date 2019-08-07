@@ -453,7 +453,7 @@ sis_bias_v_tz2019_dev_writer -->
 
 <!--sa_section-->
 
-
+<!--
   <node pkg = "necst-tz2019"
         name = "sa_reader"
         type = "relay.py">
@@ -461,7 +461,7 @@ sis_bias_v_tz2019_dev_writer -->
            value = "$(find necst-tz2019)/node_conf/sa_reader.conf" />
 
   </node>
-
+-->
 
 <!--switch_section-->
 <!--
