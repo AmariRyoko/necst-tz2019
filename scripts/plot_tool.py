@@ -110,8 +110,9 @@ def yfactor_prot(file_name, save_name):
     import matplotlib.pyplot as plt
     import std_msgs.msg
     import pandas
-
+    import numpy
     import necstdb
+    import exp_yfactor
     db = necstdb.necstdb()  #plot graph
     db.open(file_name)
 
@@ -122,19 +123,23 @@ def yfactor_prot(file_name, save_name):
 
     dd = pandas.concat(
         [
-            d2.loc['/dev/ma24126a/power'][['data']].rename(columns={'data': 'power'}).astype(float).resample('0.1S').mean(),
+            d2.loc['/dev/n9343c/ip_192_168_100_185/spec'][['data']].rename(columns={'data': 'power'}).astype(float).resample('0.1S').mean(),
         ],
         axis = 1,
     )
 
+    power = numpy.array(dd['power'])
+    trx = exp_yfactor.evaluate_trx_from_rotating_chopper_data(power, 300, 77)
+
     fig = plt.figure(figsize=(8,4))
     ax = fig.add_subplot(111)
-    ax.plot(dd['power'])
+    ax.plot(power, '_')
     ax.set_xlabel('time')
     ax.set_ylabel('power (dBm)')
-    ax.set_title('yfactor-measurement')
+    ax.set_title('yfactor-measurement(Trx = %d)'%(trx))
     ax.grid(True)
     fig.savefig('/home/exito/data/logger/' + str(save_name) +'.png')
+    return trx
 
 #if __name__ == '__main__':
 #iv_plot(file_name, save_name)
