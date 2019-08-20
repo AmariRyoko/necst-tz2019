@@ -7,6 +7,5 @@
     <include file="$(find rospkg-ogameasure)/launch/n9343c.launch" />
     <include file="$(find rospkg-ogameasure)/launch/ma24126a.launch" />
     <include file="$(find rospkg-ogameasure)/launch/tpg261.launch" />
-    <include file="$(find rospkg-ogameasure)/launch/.launch" />
 
 </launch>
