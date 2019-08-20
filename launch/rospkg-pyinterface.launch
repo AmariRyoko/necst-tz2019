@@ -1,6 +1,6 @@
 <launch>
 
-    <include file="$(find rospkg-pyinterface)/launch/pci3177.launch" pass_all_args="true"/>
-    <include file="$(find rospkg-pyinterface)/launch/pci3346.launch" pass_all_args="true"/>
+    <include file="$(find rospkg-pyinterface)/launch/pci3177.launch" />
+    <include file="$(find rospkg-pyinterface)/launch/pci3346.launch" />
 
 </launch>
