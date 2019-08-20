@@ -1,12 +1,13 @@
 <launch>
 
     <include file="$(find necst-tz2019)/launch/GPDVC15_100.launch" />
-    <include file="$(find necst-tz2019)/launch/87104b.launch" />
+
     <include file="$(find necst-tz2019)/launch/fsw0020.launch" />
     <include file="$(find necst-tz2019)/launch/l218.launch" />
     <include file="$(find necst-tz2019)/launch/n9343c.launch" />
     <include file="$(find necst-tz2019)/launch/ma24126a.launch" />
     <!--
     <include file="$(find necst-tz2019)/launch/tpg261.launch" />
+    <include file="$(find necst-tz2019)/launch/87104b.launch" />
     -->
 </launch>
