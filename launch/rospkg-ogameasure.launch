@@ -1,7 +1,7 @@
 <launch>
 
     <include file="$(find rospkg-ogameasure)/launch/GPDVC15_100.launch" />
-    <include file="$(find rospkg-ogameasure)/launch/agilent_11713B.launch" />
+    <include file="$(find rospkg-ogameasure)/launch/87104b.launch" />
     <include file="$(find rospkg-ogameasure)/launch/fsw0020.launch" />
     <include file="$(find rospkg-ogameasure)/launch/l218.launch" />
     <include file="$(find rospkg-ogameasure)/launch/n9343c.launch" />
