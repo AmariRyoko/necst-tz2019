@@ -4,7 +4,7 @@
 
 sis_bias_v_tz2019_dev_writer -->
   <node pkg = "necst-tz2019"
-        name = "sis_bias_v1_v_tz2019_dev_writwer"
+        name = "sis_bias_v1_v_tz2019_dev_writer"
         type = "relay.py">
     <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v1/v_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch5'/>
@@ -13,7 +13,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_h1_v_tz2019_dev_writwer"
+        name = "sis_bias_h1_v_tz2019_dev_writer"
         type = "relay.py">
     <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h1/v_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch6'/>
@@ -23,7 +23,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_h2_v_tz2019_dev_writwer"
+        name = "sis_bias_h2_v_tz2019_dev_writer"
         type = "relay.py">
     <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_h2/v_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch7'/>
@@ -33,7 +33,7 @@ sis_bias_v_tz2019_dev_writer -->
   </node>
 
   <node pkg = "necst-tz2019"
-        name = "sis_bias_v2_v_tz2019_dev_writwer"
+        name = "sis_bias_v2_v_tz2019_dev_writer"
         type = "relay.py">
     <remap from = '/tz2019/sis_v_cmd' to = '/tz2019/sis_v2/v_cmd'/>
     <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch8'/>
