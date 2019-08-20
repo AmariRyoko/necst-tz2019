@@ -1,0 +1,6 @@
+<launch>
+
+    <include file="$(find rospkg-pyinterface)/launch/tz_rx.launch" />
+    <include file="$(find rospkg-pyinterface)/launch/tz_rx.launch" />
+
+</launch>

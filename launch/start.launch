@@ -1,0 +1,7 @@
+<launch>
+
+  <include file="$(find necst-tz2019)/launch/tz-rx.launch" />
+  <include file="$(find rospkg-pyinterface)/launch/rospkg-pyinterface.launch" />
+  <include file="$(find rospkg-ogameasure)/launch/rospkg-ogameasure.launch" />
+
+</launch>
