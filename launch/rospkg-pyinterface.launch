@@ -1,6 +1,6 @@
 <launch>
 
-    <include file="$(find rospkg-pyinterface)/launch/pci3177.launch" />
-    <include file="$(find rospkg-pyinterface)/launch/pci3346.launch" />
+    <include file="$(find necst-tz2019)/launch/pci3177.launch" />
+    <include file="$(find necst-tz2019)/launch/pci3346.launch" />
 
 </launch>
