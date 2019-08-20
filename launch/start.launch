@@ -1,7 +1,5 @@
 <launch>
-  <group>
-    <include file="$(find necst-tz2019)/launch/tz_rx.launch" pass_all_args="true"/>
-    <include file="$(find necst-tz2019)/launch/rospkg-pyinterface.launch" pass_all_args="true"/>
-    <include file="$(find necst-tz2019)/launch/rospkg-ogameasure.launch" pass_all_args="true"/>
-  </group>
+  <include file="$(find necst-tz2019)/launch/tz_rx.launch" pass_all_args="true"/>
+  <include file="$(find necst-tz2019)/launch/rospkg-pyinterface.launch" pass_all_args="true"/>
+  <include file="$(find necst-tz2019)/launch/rospkg-ogameasure.launch" pass_all_args="true"/>
 </launch>
