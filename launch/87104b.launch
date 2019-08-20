@@ -2,9 +2,10 @@
 
   <node pkg = "rospkg-ogameasure"
         name = "agilent_11713B"
-        type = "agilent_11713B.py">
-        #required="true"
-        #output="screen"
+        type = "agilent_11713B.py"
+        required ="true"
+        output="screen"
+        machine="hinotoritz">
         <param name="~host" value="192.168.100.186" />
         <param name="~gpibport" value="10" />
 

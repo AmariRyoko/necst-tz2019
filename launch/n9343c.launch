@@ -1,8 +1,11 @@
 <launch>
-  
+
   <node pkg = "rospkg-ogameasure"
         name = "n9343c"
-        type = "n9343c.py">
+        type = "n9343c.py"
+        required="true"
+        output="screen"
+        machine="hinotoritz">
         <param name="~host" value="192.168.100.185" />
         <param name="~port" value="5025" />
     <remap from = '/dev/n9343c/__IP__/spec' to = '/dev/n9343c/ip_192_168_100_185/spec'/>
@@ -10,4 +13,3 @@
   </node>
 
 </launch>
-
