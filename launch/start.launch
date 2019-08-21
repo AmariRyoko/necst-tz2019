@@ -4,6 +4,6 @@
   <include file="$(find necst-tz2019)/launch/rospkg-ogameasure.launch" />
   <include file="$(find necst-tz2019)/launch/rospkg-pyinterface.launch"/>
   <include file="$(find necst-tz2019)/launch/pc_status.launch"/>
-
+  <include file="$(find necst-tz2019)/launch/update_jupyter.launch"/>
 
 </launch>
