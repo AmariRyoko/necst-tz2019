@@ -4,7 +4,7 @@
   <machine name="hinotoritz" address="192.168.100.188" env-loader="/root/ros/devel/env.sh" user="hinotoritz" password="hinotoritz"  />
 
   <node pkg = "necst-core"
-        name = "pc_status"
+        name = "pc_status_hinotoritz_fac"
         type = "pc_status.py"
         required="true"
         output="screen"
@@ -18,7 +18,7 @@
   </node>
 
   <node pkg = "necst-core"
-        name = "pc_status"
+        name = "pc_status_hinotoritz"
         type = "pc_status.py"
         required="true"
         output="screen"
