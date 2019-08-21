@@ -1,7 +1,7 @@
 
 <launch>
   <machine name="hinotoritz_fac" address="192.168.100.180" env-loader="/root/ros/devel/env.sh" user="root" password="root"  />
-  <machine name="hinotoritz" address="192.168.100.188" env-loader="/root/ros/devel/env.sh" user="root" password="root"  />
+  <machine name="hinotoritz" address="192.168.100.188" env-loader="/root/ros/devel/env.sh" user="hinotoritz" password="hinotoritz"  />
 
   <node pkg = "necst-core"
         name = "pc_status"
